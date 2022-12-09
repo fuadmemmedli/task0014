@@ -32,13 +32,6 @@ function addCar() {
   modelInp.value = ''
   yearInp.value = ''
 }
-function deleteCar(id) {
-    let target = Cars.find((car) => car.id == id) 
-    let indexOfTarget = Cars.indexOf(target) 
-    Cars.splice(indexOfTarget, 1) 
-    let localArr = JSON.parse(localStorage.getItem('cars'))
-    renderList(localArr)
-  }
 btn.addEventListener('click', () => {
   addCar()
   let localArr = JSON.parse(localStorage.getItem('cars'))
